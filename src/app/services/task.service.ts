@@ -9,6 +9,7 @@ export class TaskService {
   constructor() {}
 
   getTasks(): Task[] {
+    // Local data source
     return TASKS;
   }
 }
