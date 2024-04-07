@@ -19,20 +19,27 @@ export class TaskService {
   constructor(private http: HttpClient) {}
 
   getTasks(): Observable<Task[]> {
-    return this.http.get<Task[]>(this.apiUrl);
+    // return this.http.get<Task[]>(this.apiUrl);
+    return of(TASKS);
   }
 
   deleteTask(task: Task): Observable<Task> {
-    const url = `${this.apiUrl}/${task.id}`;
-    return this.http.delete<Task>(url);
+    // const url = `${this.apiUrl}/${task.id}`;
+    // return this.http.delete<Task>(url);
+    TASKS.filter((t) => t.id !== task.id);
+    return of(task);
   }
 
   updateTaskReminder(task: Task): Observable<Task> {
-    const url = `${this.apiUrl}/${task.id}`;
-    return this.http.put<Task>(url, task, httpOptions);
+    // const url = `${this.apiUrl}/${task.id}`;
+    // return this.http.put<Task>(url, task, httpOptions);
+    TASKS.map((t) => (t.id === task.id ? task : t));
+    return of(task);
   }
 
   addTask(task: Task): Observable<Task> {
-    return this.http.post<Task>(this.apiUrl, task, httpOptions);
+    // return this.http.post<Task>(this.apiUrl, task, httpOptions);
+    TASKS.push(task);
+    return of(task);
   }
 }
