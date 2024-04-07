@@ -17,21 +17,47 @@ Above commands will install Angular CLI version 17 globally.
 2. Set up the server with json-server:
 
 ```bash
-npm install -g json-server
-```
-
-We can now add server in package.json file:
-
-```json
-"scripts": {
-    "server": "json-server --watch db.json --port 5000"
-}
+npm install
 ```
 
 Go ahead and run the server:
 
 ```bash
-npm run server
+npm run server #This will start the json-server on port 5000, it is setup in package.json
 ```
 
 That's it! You are all set to explore the project tutorial.
+
+## Deployment
+
+The project is deployed online using GitHub Pages.
+
+Create a gh-pages branch:
+
+```bash
+git checkout -b gh-pages
+```
+
+Push the changes to the gh-pages branch:
+
+```bash
+git push --set-upstream origin gh-pages
+```
+
+Goto the settings for your repository.
+
+In the pages tab, the Build and Deployment section sets the sources to Deploy from a branch.
+
+Then change the branch to gh-pages and select the root folder.
+
+### Install angular cli ghpages
+
+```bash
+ng add angular-cli-ghpages
+```
+
+Then deploy the project:
+
+```bash
+ng deploy --base-href=https://<username>.github.io/<repository>/
+```
