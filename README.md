@@ -1,6 +1,8 @@
 # Task Tracker
 
-Through a detailed walkthrough, learners are introduced to advanced Angular features that enhance the functionality and user experience of web applications. By implementing a mock backend with JSON-Server and performing CRUD operations via Angular's HTTP Client, the tutorial provides a practical approach to data management in Angular apps. The use of directives like `ngModel`, `ngFor`, `ngIf`, and `ngClass` showcases Angular's capabilities for creating responsive and dynamic interfaces. Additionally, the tutorial covers the setup of Angular Router for application navigation, and Angular Forms Module for handling user input, ensuring a comprehensive learning experience in Angular application development. https://indamutsa.github.io/angular-crash-course
+Project Preview: [Task Tracker](https://indamutsa.github.io/angular-crash-course)
+
+Through a detailed walkthrough, learners are introduced to advanced Angular features that enhance the functionality and user experience of web applications. By implementing a mock backend with JSON-Server and performing CRUD operations via Angular's HTTP Client, the tutorial provides a practical approach to data management in Angular apps. The use of directives like `ngModel`, `ngFor`, `ngIf`, and `ngClass` showcases Angular's capabilities for creating responsive and dynamic interfaces. Additionally, the tutorial covers the setup of Angular Router for application navigation, and Angular Forms Module for handling user input, ensuring a comprehensive learning experience in Angular application development.
 
 ## Project Setup
 
