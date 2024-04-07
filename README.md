@@ -1,27 +1,37 @@
-# AngularCrashCourse
+# Task Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+Through a detailed walkthrough, learners are introduced to advanced Angular features that enhance the functionality and user experience of web applications. By implementing a mock backend with JSON-Server and performing CRUD operations via Angular's HTTP Client, the tutorial provides a practical approach to data management in Angular apps. The use of directives like `ngModel`, `ngFor`, `ngIf`, and `ngClass` showcases Angular's capabilities for creating responsive and dynamic interfaces. Additionally, the tutorial covers the setup of Angular Router for application navigation, and Angular Forms Module for handling user input, ensuring a comprehensive learning experience in Angular application development
 
-## Development server
+## Project Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Install Angular CLI globally:
 
-## Code scaffolding
+```bash
+nvm install 20
+nvm use 20
+npm install -g @angular/cli@17
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Above commands will install Angular CLI version 17 globally.
 
-## Build
+2. Set up the server with json-server:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm install -g json-server
+```
 
-## Running unit tests
+We can now add server in package.json file:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```json
+"scripts": {
+    "server": "json-server --watch db.json --port 5000"
+}
+```
 
-## Running end-to-end tests
+Go ahead and run the server:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm run server
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+That's it! You are all set to explore the project tutorial.
